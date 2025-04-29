@@ -1,0 +1,4 @@
+services:
+  dynamic_view_block.views_manager:
+    class: Drupal\dynamic_view_block\Service\ViewsManager
+    arguments: ['@entity_type.manager', '@views.executable']

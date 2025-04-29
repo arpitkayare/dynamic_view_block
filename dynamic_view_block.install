@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for Dynamic View Block module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function dynamic_view_block_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'install') {
+    if (!class_exists('\Drupal\views\ViewExecutableFactory')) {
+      $requirements['dynamic_view_block_views_dependency'] = [
+        'title' => t('Dynamic View Block dependencies'),
+        'description' => t('Dynamic View Block requires the Views module to be installed.'),
+        'severity' => REQUIREMENT_ERROR,
+      ];
+    }
+
+    if (!class_exists('\Drupal\Core\Utility\Token')) {
+      $requirements['dynamic_view_block_token_dependency'] = [
+        'title' => t('Dynamic View Block dependencies'),
+        'description' => t('Dynamic View Block requires the Token module to be installed.'),
+        'severity' => REQUIREMENT_ERROR,
+      ];
+    }
+  }
+
+  return $requirements;
+}

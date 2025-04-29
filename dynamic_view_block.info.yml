@@ -1,0 +1,9 @@
+name: 'Dynamic View Block'
+type: module
+description: 'Provides a block that dynamically renders a selected View and Display with configurable arguments.'
+core_version_requirement: ^10 || ^11
+package: 'Custom'
+dependencies:
+  - drupal:block
+  - drupal:views
+  - drupal:token

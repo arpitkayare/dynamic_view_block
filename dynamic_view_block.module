@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dynamic_view_block.module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function dynamic_view_block_help($route_name) {
+  switch ($route_name) {
+    case 'help.page.dynamic_view_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Dynamic View Block module allows administrators to create blocks that dynamically render views with configurable displays and arguments.') . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Creating dynamic view blocks') . '</dt>';
+      $output .= '<dd>' . t('The module provides a block type that allows you to select a view and display to render in the block. You can also provide dynamic arguments to the view, including tokens.') . '</dd>';
+      $output .= '</dl>';
+      return $output;
+  }
+}

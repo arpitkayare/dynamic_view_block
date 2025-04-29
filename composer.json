@@ -1,0 +1,11 @@
+ {
+  "name": "drupal/dynamic_view_block",
+  "type": "drupal-module",
+  "description": "Allows administrators to create blocks that dynamically render views with configurable displays and arguments.",
+  "keywords": ["Drupal", "Views", "Block"],
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/core": "^10 || ^11"
+  }
+}
